@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agatha's Good Eats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>GET IN LINE FOR DELICIOUS!</h1>
+    <header>
+        <%- include('header', { pageTitle: 'Home Page' }) %>
+    </header>
+    <div>
+        <p>Click for our range of products!</p>
+        <div class="button">
+            <form action="/products" method="get">
+                <button type="submit">Check out our stuff!!</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

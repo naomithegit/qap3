@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Sweet Home Page</title>
+  </head>
+  <body style="font-family: Arial, sans-serif;">
+    <header style="text-align: center; margin-bottom: 20px;">
+      <h1>Stuff your face with our Stuff on Offer!!!</h1>
+    </header>
+    <main style="text-align: center;">
+      <div style="margin: 20px auto; width: fit-content;">
+        <h3 style="color: #333;"><%= product.productname %></h3>
+        <p style="color: #666;"><%= product.productdescription %></p>
+        <% if (!isNaN(parseFloat(product.productprice))) { %>
+        <p style="color: green;">Price: $<%= parseFloat(product.productprice).toFixed(2) %></p>
+        <% } else { %>
+        <p>Price: Not available</p>
+        <% } %>
+      </div>
+      <form>
+        <button formaction="/products/<%= product.productid %>/update" type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Update Product</button>
+      </form>
+    </main>
+  </body>
+</html>

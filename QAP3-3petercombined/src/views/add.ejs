@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= Add Product %></title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+    <%- include('partials/header.ejs') %>
+    <header>
+        <h2><%= pageTitle %></h2>
+    </header>
+    <main>
+        <form action="/products" method="POST" style="margin-bottom: 20px;">
+            <div style="margin-bottom: 10px;">
+                <label for="productname">Name:</label><br>
+                <input id="productname" name="productname" type="text" value="<%= product ? product.name : '' %>" style="width: 100%;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="productdescription">Description:</label><br>
+                <input id="productdescription" name="productdescription" type="text" value="<%= product ? product.description : '' %>" style="width: 100%;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="productprice">Price:</label><br>
+                <input id="productprice" name="productprice" type="number" min="0" step="0.01" value="<%= product ? product.price : '' %>" style="width: 100%;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="stockquantity">Qty:</label><br>
+                <input id="stockquantity" name="stockquantity" type="number" min="0" value="<%= product ? product.stockQuantity : '' %>" style="width: 100%;">
+            </div>
+
+            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Add</button>
+        </form>
+        <div style="text-align: center;">
+            <a href="/products" style="color: #007BFF; text-decoration: none;">Back to Products</a>
+        </div>
+    </main>
+</body>
+</html>

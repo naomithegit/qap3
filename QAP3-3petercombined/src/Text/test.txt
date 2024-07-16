@@ -1,0 +1,10 @@
+Test Scenarios for Agatha’s Good Eats Application
+1. As a customer, I can see a web page listing all the products from the database.
+2. As a business partner, I can fetch all the products from the database from a REST API. The records will be returned as JSON data.
+3. As a staff member, I can see a web page that will allow me to add a new product to the database.
+4. As a staff member, I can see a web page that will allow me to update an existing product in the database.
+5. As a staff member, I can see a web page that will allow me to delete a product from the database.
+
+>><>>>>>>>><>><>><>>><<<<<<<
+
+
